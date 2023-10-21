@@ -11,10 +11,11 @@ public class Server {
       InputStream is = s.getInputStream();
       OutputStream os = s.getOutputStream();
       System.out.println("waiting for nom");
-      char nm = is.read();
-      System.out.println("Bonjour Mr " + nm);
+      int nb = is.read();
+      int res = nb * 3;
+      System.out.println("nb= " + nb);
       System.out.println("i send the response");
-      os.write(nm);
+      os.write(res);
       s.close();
       se.close();
       System.out.println("END");
