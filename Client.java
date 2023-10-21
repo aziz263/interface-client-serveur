@@ -10,11 +10,11 @@ public class Client {
             InputStream is = s.getInputStream();
             OutputStream os = s.getOutputStream();
             Scanner sc = new Scanner(System.in);
-            char nm = sc.nextInt();
-            os.write(nm);
+            int nb = sc.nextInt();
+            os.write(nb);
             int res = is.read();
-            System.out.println("Bonjour Mr " + nm);
-            os.write(nm);
+            System.out.println("Res= " + res);
+            os.write(res);
             s.close();
             sc.close();
 
